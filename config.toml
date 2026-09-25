@@ -1,0 +1,29 @@
+# Codex config — Luna-first routing to stretch usage limits
+# Install with: bash install.sh  (backs up your existing config first)
+
+# Default lane: cheapest model, light reasoning for everyday work
+model = "gpt-5.6-luna"
+model_reasoning_effort = "low"
+
+# Escalation lanes — switch with: codex --profile <name>
+[profiles.luna-med]
+model = "gpt-5.6-luna"
+model_reasoning_effort = "medium"
+
+[profiles.luna-high]
+model = "gpt-5.6-luna"
+model_reasoning_effort = "high"
+
+[profiles.luna-max]
+model = "gpt-5.6-luna"
+model_reasoning_effort = "max"
+
+# Escalate here when Luna gets the judgment wrong
+[profiles.terra]
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"
+
+# Hardest problems only
+[profiles.terra-high]
+model = "gpt-5.6-terra"
+model_reasoning_effort = "high"
