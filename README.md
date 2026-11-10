@@ -1,4 +1,4 @@
-# CODEX-GPT-6-LUNA-TOKEN
+# codex-luna-routing
 
 Never hit your Codex rate limits again — for free. This repo ships a ready-made `config.toml` + `AGENTS.md` that turns **GPT-5.6 Luna** (the cheapest, fastest model on your plan) into your default Codex lane, and reserves stronger models for escalation only.
 
@@ -17,27 +17,19 @@ Codex's default model burns your quota fast. This setup flips the default to **L
 
 **Result:** on a ChatGPT Plus plan, Luna gives roughly 50–280 messages per 5 hours vs ~20–110 for Terra (the usual default). Luna-first routing ≈ **2–3x the free throughput** of a default setup.
 
-## What you get
-
-- `luna low` as the default lane — mechanical edits, renames, boilerplate, small changes
-- Escalation profiles for harder work: `luna-med` → `luna-high` → `luna-max` → `terra` → `terra-high`
-- Escalate **one control at a time** (effort first, model tier second) — never both at once
-- Tests and the compiler decide success, not the model guessing
-- Your existing `config.toml` is backed up before anything is touched
-
 ## Install
 
 One command:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/Nags016/CODEX-GPT-6-LUNA-TOKEN/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/Nags016/codex-luna-routing/main/install.sh)
 ```
 
 Or from a cloned copy:
 
 ```bash
-git clone https://github.com/Nags016/CODEX-GPT-6-LUNA-TOKEN.git
-cd CODEX-GPT-6-LUNA-TOKEN
+git clone https://github.com/Nags016/codex-luna-routing.git
+cd codex-luna-routing
 bash install.sh
 ```
 
